@@ -10,7 +10,8 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Docker gir et ferdig og isolert miljø som fungerer likt på alle maskiner, slik at man unngår komplisert installasjon og 
+at PostgreSQL påvirker resten av systemet.
 
 ---
 
@@ -18,7 +19,8 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Betyr at data lagres utenfor containeren, slik at databasen ikke forsvinner når containeren stoppes eller slettes.
+Dette muliggjør å starte og stoppe systemet uten å miste data.
 
 ---
 
@@ -26,7 +28,8 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Det stopper og fjerner containeren, men dataene beholdes da de ligger i et persistent volum. 
+Man mister da ikke databasen selv om containeren slettes.
 
 ---
 
@@ -34,7 +37,8 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Første gang lastes bildet ned, containeren opprettes og databasen initialiseres. 
+Den andre gangen bruker Docker de eksisterende filene og volumene, så containeren starter mye raskere uten å sette opp databasen igjen.
 
 ---
 
@@ -42,7 +46,8 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Jeg ville nok delt via Git eller som en vanlig tekstfil, men sørge for at det ikke inneholder passord eller andre verdier.
+Slike kan ligge i miljøvariabler, ikke i selve compose-filen.
 
 ---
 
