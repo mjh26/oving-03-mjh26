@@ -162,19 +162,28 @@ Også når man kjører SQL-filen flere ganger, får man "role already exists", m
 ## Oppgave 4: Brukeradministrasjon og GRANT
 
 1. **Hva er Row-Level Security og hvorfor er det viktig?**
-   - Svar her...
+   - Det er en mekanisme som gjør at databasen automatisk filtrerer hvilke rader en bruker får se.
+   - Dette er viktig for det hindrer brukere i å se data de ikke skal ha tilgang til, og beskytter 
+   - personvern og sensitive informasjon.
 
 2. **Hva er forskjellen mellom RLS og kolonnebegrenset tilgang?**
-   - Svar her...
+   - RLS begrenser hvilke rader en bruker kan se.
+   - Kolonnebegrenset tilgang begrenser hvilke kolonner en bruker kan se.
+   - RLS handler om hvilke data, mens kolonnebegrensning handler om hvilke felter i datene.
 
 3. **Hvordan ville du implementert at en student bare kan se karakterer for sitt eget program?**
-   - Svar her...
+   - Ville laget en RLS-policy som sjekker om studentends program_id matcher raden som hentes.
+   - F.eks. koble brukeren til student_id, sjekke studentenes program_id i en subquery, og
+   - tillate SELECT hvis program_id stemmer.
 
 4. **Hva er sikkerhetsproblemene ved å bruke views i stedet for RLS?**
-   - Svar her...
+   - Views kan skjule data, men hindrer ikke tilgang hvis brukeren fortsatt har rettigheter til originaltabellen.
+   - RLS er mer sikker for det håndheves direkte av databasen, og omgås med spørringer.
 
 5. **Hvordan ville du testet at RLS-policyer fungerer korrekt?**
-   - Svar her...
+   - Ville logget inn som forskjellige brukere, og kjørt SELECT-spørringer for å sjekke om
+   - studenter ser egne rader, foreleser ser alle rader, admin ser alt og at data man ikke skal se gi
+   - ingen resultat eller ingen tilgang.
 
 ---
 
