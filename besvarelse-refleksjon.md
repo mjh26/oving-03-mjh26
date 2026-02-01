@@ -107,7 +107,9 @@ som brukes i søk eller JOIN.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Det vil si at en bruker kun skal få akkurat de rettighetene som er nødvendige for å gjøre oppgaven sin.
+Dette er viktig for å redusere risikoen for feil, misbruk og sikkerhetsbrudd.
+Hvis en bruker får mye tilgang, kan en ødelegge eller endre data ved et uhell.
 
 ---
 
@@ -115,7 +117,8 @@ som brukes i søk eller JOIN.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Forskjellen er at en bruker er en konto som kan logge inn i databasen, mens en rolle er en samling rettigheter
+som kan gis til brukere. Brukere kan være medlemmer av en eller flere roller og arve deres rettigheter.
 
 ---
 
@@ -123,7 +126,9 @@ som brukes i søk eller JOIN.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Det er bedre for det gjør administrasjonen enklere. I stedet for å gi rettigheter til enkelte brukere,
+gir man rettigheter til en rolle og legger brukerne inn i rollen. 
+Dette unngår å endre rettigheter for hver bruker en etter en.
 
 ---
 
@@ -131,7 +136,8 @@ som brukes i søk eller JOIN.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Brukeren kan slette tabeller, views eller hele databasen. Det fører til tap av data, ødelagte systemer
+og store sikkerhetsproblemer. Kun administratorer bør ha DROP.
 
 ---
 
@@ -139,7 +145,8 @@ som brukes i søk eller JOIN.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Man kan lag et VIEW som filtrerer karakter basert på hvem som er logget inn, og 
+gitt studenten SELECT-rettigheter på dette. Da kan studenten kun se egen data, og ikke hele tabellen.
 
 ---
 
@@ -147,7 +154,9 @@ som brukes i søk eller JOIN.
 
 Bruk denne delen til å dokumentere interessante funn, problemer du møtte, eller andre observasjoner:
 
-[Skriv dine notater her]
+Jeg oppdaget at roller må testes ved å legge inn på dem for å sjekke hva slags rettigheter en faktisk har.
+REVOKE fjerner ikke alltid rettigheter hvis de kommer fra en annen rolle. 
+Også når man kjører SQL-filen flere ganger, får man "role already exists", men det påvirket ikke noe.
 
 
 ## Oppgave 4: Brukeradministrasjon og GRANT

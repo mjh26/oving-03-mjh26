@@ -82,6 +82,9 @@ DELETE FROM studenter WHERE student_id = 1;
 ```
 
 Hva skjer? Dokumenter resultatene.
+--SELECT fungerer, forelesninger kan lese studenter.
+--INSERT fungerer, foreleser kan legge til studenter.
+--DELETE får ERROR, foreleser kan ikke slette, dvs. en har begrensede rettigheter.
 
 ### Del 3: Test tilgang som student
 
@@ -108,6 +111,9 @@ UPDATE studenter SET fornavn = 'Ola' WHERE student_id = 1;
 ```
 
 Hva skjer? Dokumenter resultatene.
+--SELECT fungerer, studenten kan lese alle studenter.
+--INSERT får ERROR, studenten har ikke rettigheter eller pga. unik e-post.
+--UPDATE skal ikke fungerte i prinsippet, men her ser det ut til å fungere.
 
 ### Del 4: Opprett ny rolle med begrenset tilgang
 
