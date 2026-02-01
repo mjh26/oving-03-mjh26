@@ -46,7 +46,7 @@ Den andre gangen bruker Docker de eksisterende filene og volumene, så container
 
 **Ditt svar:**
 
-Jeg ville nok delt via Git eller som en vanlig tekstfil, men sørge for at det ikke inneholder passord eller andre verdier.
+Jeg ville delt via Git eller som en vanlig tekstfil, men sørge for at det ikke inneholder passord eller andre verdier.
 Slike kan ligge i miljøvariabler, ikke i selve compose-filen.
 
 ---
@@ -57,15 +57,18 @@ Slike kan ligge i miljøvariabler, ikke i selve compose-filen.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
-
+INNER JOIN viser rader som er lik i begge tabeller.
+LEFT JOIN viser alle rader fra venstre tabell, i tillegg til de som ikke er like i høyre tabell.
+INNER JOIN kan brukes når man vil kun ha data som hører sammen i begge tabeller, mens LEFT JOIN når man vil beholde alle rader
+fra venstre tabell, selv om noen ikke kobler sammen.
 ---
 
 ### Spørsmål 2: Hvorfor bruker vi fremmednøkler? Hva skjer hvis du prøver å slette et program som har studenter?
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Det brukes for å sikre at data henger sammen riktig f.eks. en student peker alltid på et gyldig program.
+Hvis man prøver å slette et program som fortsatt har studenter, vil databasen stoppe for det ville opprettet ødelagte referanser.
 
 ---
 
@@ -73,7 +76,9 @@ Slike kan ligge i miljøvariabler, ikke i selve compose-filen.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+GROUP BY samler rader i grupper basert på en kolonne, slik at man kan bruke funksjoner som COUNT,
+SUM eller AVG på hver gruppe. Dette er nødvendig for databasen som må vite hvordan radene skal grupperes før den 
+kan regne ut totalsummer eller gjennomsnitt.
 
 ---
 
@@ -81,7 +86,8 @@ Slike kan ligge i miljøvariabler, ikke i selve compose-filen.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+En indeks er som et register i en bok som gjør det raskere å finne data. 
+Den er viktig for ytelse for den gjør søk og filtrering raskere, spesielt i store tabeller.
 
 ---
 
@@ -89,7 +95,9 @@ Slike kan ligge i miljøvariabler, ikke i selve compose-filen.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Man kan sjekke om tabellene har riktige indekser, forenkle spørringen, unngått unødvendige JOINs
+og filtrert data med WHERE. Spørringen blir ofte raskere når det legges til en indeks på kolonner 
+som brukes i søk eller JOIN.
 
 ---
 
